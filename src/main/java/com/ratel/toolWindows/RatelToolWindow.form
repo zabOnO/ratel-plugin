@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.ratel.toolWindows.RatelToolWindow">
+  <grid id="27dc6" binding="context" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="537" height="426"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="5cc7" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <toolbar id="eb82e">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <borderPainted value="false"/>
+              <orientation value="1"/>
+            </properties>
+            <border type="empty">
+              <title-color color="-10921639"/>
+              <size top="0" left="0" bottom="3" right="0"/>
+              <color color="-4473925"/>
+            </border>
+            <children>
+              <component id="18d70" class="javax.swing.JButton" binding="restart">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <background color="-12828863"/>
+                  <borderPainted value="false"/>
+                  <enabled value="true"/>
+                  <focusCycleRoot value="false"/>
+                  <focusPainted value="true"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <focusable value="false"/>
+                  <foreground color="-12828863"/>
+                  <hideActionText value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <icon value="icon/restart_dark.png"/>
+                  <iconTextGap value="0"/>
+                  <inheritsPopupMenu value="false"/>
+                  <maximumSize width="30" height="30"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="30" height="30"/>
+                  <pressedIcon value="icon/restart.png"/>
+                  <selected value="false"/>
+                  <text value=""/>
+                  <toolTipText resource-bundle="messages/bundle" key="refresh"/>
+                  <verticalAlignment value="0"/>
+                  <verticalTextPosition value="0"/>
+                </properties>
+              </component>
+              <component id="452b1" class="javax.swing.JButton">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <borderPainted value="false"/>
+                  <defaultCapable value="false"/>
+                  <disabledIcon value="icon/toolWindowDebugger.png"/>
+                  <enabled value="true"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="icon/startDebugger.png"/>
+                  <maximumSize width="30" height="30"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="30" height="30"/>
+                  <rolloverEnabled value="true"/>
+                  <text value=""/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+              <component id="1dcf4" class="javax.swing.JButton">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <borderPainted value="false"/>
+                  <defaultCapable value="false"/>
+                  <disabledIcon value="icon/toolWindowDebugger.png"/>
+                  <enabled value="true"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="icon/StopTest(RiderDark).png"/>
+                  <maximumSize width="30" height="30"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="30" height="30"/>
+                  <rolloverEnabled value="true"/>
+                  <text value=""/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+            </children>
+          </toolbar>
+          <toolbar id="ba9ce">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <orientation value="1"/>
+            </properties>
+            <border type="empty"/>
+            <children>
+              <component id="18a5e" class="javax.swing.JButton">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <borderPainted value="false"/>
+                  <enabled value="true"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <icon value="icon/pause.png"/>
+                  <maximumSize width="30" height="30"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="30" height="30"/>
+                  <text value=""/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+              <component id="191f1" class="javax.swing.JButton">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <background color="-12828863"/>
+                  <borderPainted value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <foreground color="-12828863"/>
+                  <hideActionText value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <icon value="icon/Settings(GrayDark).png"/>
+                  <iconTextGap value="0"/>
+                  <inheritsPopupMenu value="false"/>
+                  <maximumSize width="30" height="30"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="30" height="30"/>
+                  <selected value="false"/>
+                  <text value=""/>
+                  <toolTipText resource-bundle="messages/bundle" key="refresh"/>
+                  <verticalAlignment value="0"/>
+                  <verticalTextPosition value="0"/>
+                </properties>
+              </component>
+              <component id="6f560" class="javax.swing.JButton" binding="clean">
+                <constraints/>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <background color="-12828863"/>
+                  <borderPainted value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="false"/>
+                  <foreground color="-12828863"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <icon value="icon/gc_dark.png"/>
+                  <maximumSize width="30" height="30"/>
+                  <minimumSize width="30" height="30"/>
+                  <preferredSize width="30" height="30"/>
+                  <pressedIcon value="icon/gc.png"/>
+                  <text value=""/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+            </children>
+          </toolbar>
+        </children>
+      </grid>
+      <splitpane id="ddb7">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="239" height="200"/>
+          </grid>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <continuousLayout value="false"/>
+          <dividerLocation value="300"/>
+          <dividerSize value="2"/>
+          <foreground color="-12828863"/>
+          <oneTouchExpandable value="false"/>
+          <opaque value="true"/>
+          <verifyInputWhenFocusTarget value="false"/>
+          <visible value="true"/>
+        </properties>
+        <border type="empty"/>
+        <children>
+          <grid id="14d7" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties>
+              <background color="-13948117"/>
+              <doubleBuffered value="false"/>
+              <foreground color="-12828863"/>
+            </properties>
+            <border type="empty"/>
+            <children>
+              <scrollpane id="3f377">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13948117"/>
+                  <horizontalScrollBarPolicy value="30"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="98a90" class="javax.swing.JTextArea" binding="textContent">
+                    <constraints/>
+                    <properties>
+                      <background color="-13948117"/>
+                      <editable value="false"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="682e1" class="javax.swing.JTextField" binding="input">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <scrollpane id="3f56a">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties/>
+            <border type="empty"/>
+            <children>
+              <component id="78721" class="javax.swing.JLabel">
+                <constraints/>
+                <properties>
+                  <background color="-4473925"/>
+                  <icon value="icon/backgrund.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </splitpane>
+    </children>
+  </grid>
+</form>
