@@ -56,7 +56,7 @@
                   <pressedIcon value="icon/restart.png"/>
                   <selected value="false"/>
                   <text value=""/>
-                  <toolTipText resource-bundle="messages/bundle" key="refresh"/>
+                  <toolTipText value=""/>
                   <verticalAlignment value="0"/>
                   <verticalTextPosition value="0"/>
                 </properties>
@@ -154,7 +154,7 @@
                   <preferredSize width="30" height="30"/>
                   <selected value="false"/>
                   <text value=""/>
-                  <toolTipText resource-bundle="messages/bundle" key="refresh"/>
+                  <toolTipText value=""/>
                   <verticalAlignment value="0"/>
                   <verticalTextPosition value="0"/>
                 </properties>
@@ -176,6 +176,7 @@
                   <preferredSize width="30" height="30"/>
                   <pressedIcon value="icon/gc.png"/>
                   <text value=""/>
+                  <toolTipText value=""/>
                 </properties>
                 <clientProperties>
                   <html.disable class="java.lang.Boolean" value="false"/>
