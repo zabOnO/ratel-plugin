@@ -39,9 +39,10 @@ public class RatelToolWindow {
     private JButton stop;
 
     private boolean isConnect;
+    private boolean isClose;
     private WsClient wsClient;
 
-    private final List<JLabel> links = List.of(authorLink,qqLink,ruleLink,copyQQ);
+    private final List<JLabel> links = List.of(authorLink, qqLink, ruleLink, copyQQ);
 
     public RatelToolWindow() {
         this.initStyle();
@@ -91,13 +92,12 @@ public class RatelToolWindow {
 
         input.addActionListener(e -> inputHandle());
 
-        RatelToolWindow ratelToolWindow = this;
-
         links.forEach(link -> link.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 e.getComponent().setCursor(new Cursor(Cursor.HAND_CURSOR));
             }
+
             @Override
             public void mouseExited(MouseEvent e) {
                 e.getComponent().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
@@ -128,17 +128,11 @@ public class RatelToolWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 CopyPasteManager.getInstance().setContents(new StringSelection(RatelBundle.message("QQGroupNo")));
-                RatelNotifier.notifyInfo(null,"复制成功");
+                RatelNotifier.notifyInfo(null, "复制成功");
             }
         });
-        stop.addActionListener(e ->{
-            if (isConnect){
-                wsClient.close();
-                isConnect = false;
-                textContent.append("已关闭");
-            }else {
-                RatelNotifier.notifyInfo(null,"还未连接，请勿关闭");
-            }
+        stop.addActionListener(e -> {
+            stop();
         });
     }
 
@@ -149,7 +143,7 @@ public class RatelToolWindow {
     private void inputHandle() {
         if (isConnect) {
             wsClient.sendMsg(input.getText());
-        } else {
+        } else if (!isClose){
             String text = input.getText();
             if (text == null || text.isEmpty()) {
                 textContent.append("\nNickname不能为空");
@@ -175,6 +169,15 @@ public class RatelToolWindow {
         input.setText("");
     }
 
+    private void stop() {
+        if (!isClose && isConnect) {
+            wsClient.close();
+            isClose = true;
+            isConnect = false;
+            textContent.append("已关闭");
+        }
+    }
+
     private void clean() {
         textContent.setText("");
         title.setVisible(false);
@@ -186,6 +189,7 @@ public class RatelToolWindow {
         title.setVisible(true);
         this.printStart();
         isConnect = false;
+        isClose = false;
     }
 
     private void roll2Bottom() {
