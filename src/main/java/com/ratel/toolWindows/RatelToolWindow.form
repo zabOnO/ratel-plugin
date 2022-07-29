@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="context" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="537" height="426"/>
+      <xy x="20" y="20" width="1237" height="426"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -47,16 +47,16 @@
                   <hideActionText value="false"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="11"/>
-                  <icon value="icon/restart_dark.png"/>
+                  <icon value="actions/restart_dark.png"/>
                   <iconTextGap value="0"/>
                   <inheritsPopupMenu value="false"/>
                   <maximumSize width="30" height="30"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="30" height="30"/>
-                  <pressedIcon value="icon/restart.png"/>
+                  <pressedIcon value="icon/restartJob.png"/>
                   <selected value="false"/>
                   <text value=""/>
-                  <toolTipText value=""/>
+                  <toolTipText resource-bundle="messages/bundle" key="restart"/>
                   <verticalAlignment value="0"/>
                   <verticalTextPosition value="0"/>
                 </properties>
@@ -67,11 +67,10 @@
                   <alignmentY value="0.0"/>
                   <borderPainted value="false"/>
                   <defaultCapable value="false"/>
-                  <disabledIcon value="icon/toolWindowDebugger.png"/>
                   <enabled value="true"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="0"/>
-                  <icon value="icon/startDebugger.png"/>
+                  <icon value="actions/startDebugger.png"/>
                   <maximumSize width="30" height="30"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="30" height="30"/>
@@ -82,13 +81,12 @@
                   <html.disable class="java.lang.Boolean" value="false"/>
                 </clientProperties>
               </component>
-              <component id="1dcf4" class="javax.swing.JButton">
+              <component id="1dcf4" class="javax.swing.JButton" binding="stop">
                 <constraints/>
                 <properties>
                   <alignmentY value="0.0"/>
                   <borderPainted value="false"/>
                   <defaultCapable value="false"/>
-                  <disabledIcon value="icon/toolWindowDebugger.png"/>
                   <enabled value="true"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="0"/>
@@ -124,7 +122,7 @@
                   <enabled value="true"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="11"/>
-                  <icon value="icon/pause.png"/>
+                  <icon value="actions/pause.png"/>
                   <maximumSize width="30" height="30"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="30" height="30"/>
@@ -146,7 +144,7 @@
                   <hideActionText value="false"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="11"/>
-                  <icon value="icon/Settings(GrayDark).png"/>
+                  <icon value="general/settings_dark.png"/>
                   <iconTextGap value="0"/>
                   <inheritsPopupMenu value="false"/>
                   <maximumSize width="30" height="30"/>
@@ -170,13 +168,13 @@
                   <foreground color="-12828863"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="11"/>
-                  <icon value="icon/gc_dark.png"/>
+                  <icon value="actions/gc_dark.png"/>
                   <maximumSize width="30" height="30"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="30" height="30"/>
-                  <pressedIcon value="icon/gc.png"/>
+                  <pressedIcon value="actions/gc.png"/>
                   <text value=""/>
-                  <toolTipText value=""/>
+                  <toolTipText resource-bundle="messages/bundle" key="clean"/>
                 </properties>
                 <clientProperties>
                   <html.disable class="java.lang.Boolean" value="false"/>
@@ -186,7 +184,7 @@
           </toolbar>
         </children>
       </grid>
-      <splitpane id="ddb7">
+      <splitpane id="ddb7" binding="splitPane">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="239" height="200"/>
@@ -194,16 +192,18 @@
         </constraints>
         <properties>
           <autoscrolls value="false"/>
-          <continuousLayout value="false"/>
+          <continuousLayout value="true"/>
           <dividerLocation value="300"/>
-          <dividerSize value="2"/>
+          <dividerSize value="5"/>
           <foreground color="-12828863"/>
           <oneTouchExpandable value="false"/>
           <opaque value="true"/>
           <verifyInputWhenFocusTarget value="false"/>
           <visible value="true"/>
         </properties>
-        <border type="empty"/>
+        <border type="empty">
+          <title-color color="-13948117"/>
+        </border>
         <children>
           <grid id="14d7" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
@@ -217,23 +217,252 @@
             </properties>
             <border type="empty"/>
             <children>
-              <scrollpane id="3f377">
+              <scrollpane id="3f377" binding="scroll">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <autoscrolls value="true"/>
                   <background color="-13948117"/>
                   <horizontalScrollBarPolicy value="30"/>
                 </properties>
-                <border type="none"/>
+                <border type="empty">
+                  <title-color color="-4473925"/>
+                </border>
                 <children>
-                  <component id="98a90" class="javax.swing.JTextArea" binding="textContent">
+                  <grid id="e91e5" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints/>
                     <properties>
                       <background color="-13948117"/>
-                      <editable value="false"/>
                     </properties>
-                  </component>
+                    <border type="empty"/>
+                    <children>
+                      <grid id="c2ed5" binding="title" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-13948117"/>
+                          <enabled value="true"/>
+                          <visible value="true"/>
+                        </properties>
+                        <border type="empty"/>
+                        <children>
+                          <grid id="a0f3c" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="0">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13948117"/>
+                            </properties>
+                            <border type="empty"/>
+                            <children>
+                              <component id="7b03f" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-13948117"/>
+                                  <text resource-bundle="messages/bundle" key="version"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="7dc2b" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13948117"/>
+                            </properties>
+                            <border type="empty"/>
+                            <children>
+                              <component id="12198" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-13948117"/>
+                                  <horizontalAlignment value="2"/>
+                                  <text resource-bundle="messages/bundle" key="welcome"/>
+                                </properties>
+                              </component>
+                              <component id="e442c" class="javax.swing.JLabel" binding="authorLink">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-13948117"/>
+                                  <foreground color="-14124066"/>
+                                  <text resource-bundle="messages/bundle" key="author"/>
+                                  <visible value="true"/>
+                                </properties>
+                              </component>
+                              <component id="73108" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <alignmentY value="0.0"/>
+                                  <background color="-13948117"/>
+                                  <icon value="ide/external_link_arrow.png"/>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <hspacer id="6d717">
+                                <constraints>
+                                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </hspacer>
+                            </children>
+                          </grid>
+                          <grid id="8c5ba" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13948117"/>
+                            </properties>
+                            <border type="empty"/>
+                            <children>
+                              <component id="8c76c" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <font style="1"/>
+                                  <horizontalAlignment value="2"/>
+                                  <text resource-bundle="messages/bundle" key="QQGroup"/>
+                                </properties>
+                              </component>
+                              <hspacer id="6ac0a">
+                                <constraints>
+                                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </hspacer>
+                              <component id="cb6a1" class="javax.swing.JLabel" binding="qqLink">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <foreground color="-14124066"/>
+                                  <text resource-bundle="messages/bundle" key="QQGroupNo"/>
+                                  <visible value="true"/>
+                                </properties>
+                              </component>
+                              <component id="e6867" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <alignmentY value="0.0"/>
+                                  <icon value="ide/external_link_arrow.png"/>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="6c308" class="javax.swing.JLabel" binding="copyQQ">
+                                <constraints>
+                                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <icon value="actions/copy.png"/>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="1408f" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13948117"/>
+                            </properties>
+                            <border type="empty"/>
+                            <children>
+                              <component id="c45" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <font style="1"/>
+                                  <horizontalAlignment value="2"/>
+                                  <text resource-bundle="messages/bundle" key="rule"/>
+                                </properties>
+                              </component>
+                              <component id="fa2d0" class="javax.swing.JLabel" binding="ruleLink">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <foreground color="-14124066"/>
+                                  <text resource-bundle="messages/bundle" key="ruleLink"/>
+                                  <visible value="true"/>
+                                </properties>
+                              </component>
+                              <component id="ce50a" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <alignmentY value="0.0"/>
+                                  <icon value="ide/external_link_arrow.png"/>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <hspacer id="cd747">
+                                <constraints>
+                                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </hspacer>
+                            </children>
+                          </grid>
+                          <grid id="c7a88" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13948117"/>
+                              <foreground color="-13948117"/>
+                            </properties>
+                            <border type="empty"/>
+                            <children>
+                              <component id="823b4" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <font style="1"/>
+                                  <text resource-bundle="messages/bundle" key="tips"/>
+                                </properties>
+                              </component>
+                              <hspacer id="66c50">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </hspacer>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                      <component id="98a90" class="javax.swing.JTextArea" binding="textContent">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-13948117"/>
+                          <editable value="false"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
                 </children>
               </scrollpane>
               <component id="682e1" class="javax.swing.JTextField" binding="input">
@@ -242,7 +471,12 @@
                     <preferred-size width="150" height="-1"/>
                   </grid>
                 </constraints>
-                <properties/>
+                <properties>
+                  <alignmentX value="0.5"/>
+                  <alignmentY value="0.5"/>
+                  <background color="-13948117"/>
+                  <margin top="2" left="6" bottom="2" right="6"/>
+                </properties>
               </component>
             </children>
           </grid>

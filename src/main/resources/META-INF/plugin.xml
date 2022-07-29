@@ -1,20 +1,43 @@
 <idea-plugin>
-    <id>org.example.ratel-plugin</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>com.ratel</id>
 
-    <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-    ]]></description>
+    <name>ratel</name>
 
+    <version>1.0.0</version>
+
+    <idea-version since-build="213" until-build="222.*"/>
+
+    <!--
+    Vendor name or Organization ID (if you have one created).
+    Attributes:
+     - "url" (optional) - specifies the link to the vendor's homepage
+     - "email" (optional) - specifies the vendor's email address
+    Displayed on the Plugins Page.
+    -->
+    <vendor>ratel</vendor>
+
+    <!--
+    Plugin description displayed on the Marketplace plugin page and in
+    the IDE Plugin Manager.
+    Simple HTML elements (text formatting, paragraphs, lists, etc.) can be
+    added inside of <![CDATA[ ]]> tag. Guidelines:
+    https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description
+    -->
+    <description>
+        <![CDATA[
+    Ratel-online的idea插件客户端
+    伪装成运行控制台的样子，让你能在老板的眼皮底下安全的打牌。
+  ]]>
+    </description>
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <toolWindow factoryClass="com.ratel.toolWindows.RatelToolWindowFactory" id="ratel" anchor="bottom"/>
+        <notificationGroup displayType="TOOL_WINDOW" id="ratel balloon"/>
+        <toolWindow factoryClass="com.ratel.toolWindows.RatelToolWindowFactory" id="ratel" anchor="bottom"
+                    icon="RatelIcons.glassfish"/>
     </extensions>
 
     <actions>

@@ -2,8 +2,8 @@ plugins {
     id 'org.jetbrains.intellij' version '1.7.0'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'com.ratel'
+version '1.0-0'
 
 // Configure project's dependencies
 repositories {
@@ -12,11 +12,26 @@ repositories {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2021.3.3'
+    version = '2021.3'
+    updateSinceUntilBuild = false
+}
+
+signPlugin {
+    certificateChain = System.getenv("CERTIFICATE_CHAIN")
+    privateKey = System.getenv("PRIVATE_KEY")
+    password = System.getenv("PRIVATE_KEY_PASSWORD")
+}
+
+publishPlugin {
+    token = System.getenv("PUBLISH_TOKEN")
 }
 
 patchPluginXml {
+    version project.version
     changeNotes = """
       Add change notes here.<br>
       <em>most HTML tags may be used</em>"""
+}
+dependencies {
+    implementation 'com.alibaba.fastjson2:fastjson2:2.0.10'
 }
