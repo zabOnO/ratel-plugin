@@ -132,8 +132,13 @@ public class RatelToolWindow {
             }
         });
         stop.addActionListener(e ->{
-            wsClient.close();
-            textContent.append("已关闭");
+            if (isConnect){
+                wsClient.close();
+                isConnect = false;
+                textContent.append("已关闭");
+            }else {
+                RatelNotifier.notifyInfo(null,"还未连接，请勿关闭");
+            }
         });
     }
 

@@ -90,10 +90,11 @@
                   <enabled value="true"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="0"/>
-                  <icon value="icon/StopTest(RiderDark).png"/>
+                  <icon value="icon/StopTest(RiderLight).png"/>
                   <maximumSize width="30" height="30"/>
                   <minimumSize width="30" height="30"/>
                   <preferredSize width="30" height="30"/>
+                  <pressedIcon value="icon/StopTest(RiderDark).png"/>
                   <rolloverEnabled value="true"/>
                   <text value=""/>
                 </properties>
