@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.ratel'
-version '1.0-0'
+version '213.1.2'
 
 // Configure project's dependencies
 repositories {
@@ -17,8 +17,8 @@ intellij {
 }
 
 signPlugin {
-    certificateChain = System.getenv("CERTIFICATE_CHAIN")
-    privateKey = System.getenv("PRIVATE_KEY")
+    certificateChainFile = new File(System.getenv("CERTIFICATE_CHAIN_FILE")?:"chain.crt")
+    privateKeyFile = new File(System.getenv("PRIVATE_KEY_FILE")?:"private.pem")
     password = System.getenv("PRIVATE_KEY_PASSWORD")
 }
 
@@ -28,9 +28,9 @@ publishPlugin {
 
 patchPluginXml {
     version project.version
-    changeNotes = """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+    changeNotes = """description in English<br>
+         Modify the way to get ContentFactory             
+        """
 }
 dependencies {
     implementation 'com.alibaba.fastjson2:fastjson2:2.0.10'

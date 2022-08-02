@@ -16,8 +16,8 @@ public class RatelToolWindowFactory implements ToolWindowFactory, DumbAware {
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         RatelToolWindow ratelToolWindow = new RatelToolWindow();
-        ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
-        Content content = contentFactory.createContent(ratelToolWindow.getContext(), "", false);
+        ContentFactory factory = toolWindow.getContentManager().getFactory();
+        Content content = factory.createContent(ratelToolWindow.getContext(), "", false);
         toolWindow.getContentManager().addContent(content);
     }
 }

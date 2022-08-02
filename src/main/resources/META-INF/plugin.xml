@@ -3,7 +3,7 @@
 
     <name>ratel</name>
 
-    <version>1.0.0</version>
+    <version>213.1.2</version>
 
     <idea-version since-build="201" until-build="202.*"/>
 
@@ -25,8 +25,14 @@
     -->
     <description>
         <![CDATA[
-    Ratel-online的idea插件客户端
-    伪装成运行控制台的样子，让你能在老板的眼皮底下安全的打牌。
+    <h4>Ratel-online's IDEA plugin client</h3>
+    The operation is consistent with the web client（http://rtol.isnico.com/）<br>
+    The left button can refresh, close, clear, the other buttons are decoration<br>
+    <hr>
+    <h4>Ratel-online的idea插件客户端</h3>
+    伪装成运行控制台的样子，让你能在老板的眼皮底下安全的打牌。<br>
+    操作与web端一致（http://rtol.isnico.com/）<br>
+    左边按钮可以刷新、断开连接、清除文本，其他按钮是装饰，无实际用途
   ]]>
     </description>
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
