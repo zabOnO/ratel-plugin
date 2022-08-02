@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.ratel'
-version '213.1.1'
+version '213.1.2'
 
 // Configure project's dependencies
 repositories {
@@ -28,7 +28,9 @@ publishPlugin {
 
 patchPluginXml {
     version project.version
-    changeNotes = """初版"""
+    changeNotes = """description in English<br>
+         Modify the way to get ContentFactory             
+        """
 }
 dependencies {
     implementation 'com.alibaba.fastjson2:fastjson2:2.0.10'
