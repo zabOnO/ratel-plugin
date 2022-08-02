@@ -3,8 +3,7 @@ package com.ratel.notifier;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
-
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * @author bobo
