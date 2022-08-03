@@ -128,7 +128,7 @@ public class RatelToolWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 CopyPasteManager.getInstance().setContents(new StringSelection(RatelBundle.message("QQGroupNo")));
-                RatelNotifier.notifyInfo(null, "复制成功");
+                RatelNotifier.notifyInfo(null, RatelBundle.message("copied"));
             }
         });
         stop.addActionListener(e -> {
