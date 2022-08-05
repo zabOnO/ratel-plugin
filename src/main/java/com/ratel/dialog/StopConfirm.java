@@ -6,10 +6,14 @@ import javax.annotation.Nullable;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * @author bobo
+ */
 public class StopConfirm extends DialogWrapper {
 
     public StopConfirm() {
-        super(true); // use current window as parent
+        // use current window as parent
+        super(true);
         setTitle("断开连接确认");
         init();
     }
