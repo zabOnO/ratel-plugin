@@ -4,6 +4,7 @@ import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.ide.CopyPasteManager;
 import com.intellij.ui.Gray;
 import com.ratel.RatelBundle;
+import com.ratel.dialog.StopConfirm;
 import com.ratel.notifier.RatelNotifier;
 import com.ratel.webSocket.WsClient;
 
@@ -132,7 +133,9 @@ public class RatelToolWindow {
             }
         });
         stop.addActionListener(e -> {
-            stop();
+            if (new StopConfirm().showAndGet()){
+                stop();
+            }
         });
     }
 
@@ -171,10 +174,11 @@ public class RatelToolWindow {
 
     private void stop() {
         if (!isClose && isConnect) {
-            wsClient.close();
+            wsClient.abort();
             isClose = true;
             isConnect = false;
             textContent.append("已关闭");
+            RatelNotifier.notifyInfo(null, RatelBundle.message("closed"));
         }
     }
 
@@ -184,7 +188,7 @@ public class RatelToolWindow {
     }
 
     private void restart() {
-        wsClient.close();
+        wsClient.abort();
         textContent.setText("");
         title.setVisible(true);
         this.printStart();

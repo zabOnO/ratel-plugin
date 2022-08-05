@@ -68,11 +68,15 @@ public class WsClient {
     }
 
     public void close() {
-        this.webSocket.sendClose(0, "关闭连接");
+        this.webSocket.sendClose(WebSocket.NORMAL_CLOSURE, "ok");
     }
 
     public void close(int statusCode, String reason) {
         this.webSocket.sendClose(statusCode, reason);
+    }
+
+    public void abort() {
+        this.webSocket.abort();
     }
 
     public boolean isIs() {

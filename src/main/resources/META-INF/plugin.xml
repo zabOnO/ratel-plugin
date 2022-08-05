@@ -42,6 +42,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <notificationGroup displayType="TOOL_WINDOW" id="ratel balloon" toolWindowId="ratel"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="confirm balloon"/>
         <toolWindow factoryClass="com.ratel.toolWindows.RatelToolWindowFactory" id="ratel" anchor="bottom"
                     icon="RatelIcons.glassfish"/>
     </extensions>

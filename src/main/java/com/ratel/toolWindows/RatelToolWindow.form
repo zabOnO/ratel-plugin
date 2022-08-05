@@ -460,6 +460,7 @@
                         <properties>
                           <background color="-13948117"/>
                           <editable value="false"/>
+                          <font name="Consolas" style="1"/>
                         </properties>
                       </component>
                     </children>
